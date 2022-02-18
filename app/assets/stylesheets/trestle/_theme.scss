@@ -7,3 +7,24 @@
 
 // Customize admin theme colors:
 //
+
+$theme-colors: (
+    "primary":   #7289DA,
+    "secondary": #6A5ACD
+);
+
+// // Trestle
+
+$theme-bg-color: theme-color("primary") !default;
+
+$sidebar-active-border-color: theme-color("secondary") !default;
+
+// Dropdowns
+
+$dropdown-link-active-bg: theme-color("secondary") !default;
+
+
+
+// Forms
+
+$input-focus-border-color: lighten(#191970, 25%) !default;
