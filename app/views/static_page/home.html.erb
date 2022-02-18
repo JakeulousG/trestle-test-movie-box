@@ -1,5 +1,36 @@
-<h1>StaticPage#home</h1>
-<p>Find me in app/views/static_page/home.html.erb</p>
+<style>
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+</style>
+<table>
+    <thead>
+        <th>
+            Movie Title
+        </th>
+        <th>
+            Movie Description
+        </th>
+        <th>
+            Movie Status
+        </th>
+        <th>
+            Movie Premiere Date
+        </th>
+    </thead>
+
+    <tbody>
+        <% @movies.each do |movie| %>
+            <tr>
+                <td style="padding-left: 10px; padding-right: 10px;"> <%= movie.title %></td>
+                <td style="padding-left: 10px; padding-right: 10px;"> <%= movie.description %></td>
+                <td style="padding-left: 10px; padding-right: 10px;"> <%= movie.status %></td>
+                <td style="padding-left: 10px; padding-right: 10px;"> <%= movie.premiere_date %></td>
+            </tr>
+        <% end  %>
+    </tbody>
+</table>
 <%= link_to "/admin", class: "btn btn-primary rounded-pill" do %>
     <i class="fas fa-lock"></i>
     Admin Login
